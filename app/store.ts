@@ -15,3 +15,27 @@ export const useCounterStore = create<CounterStore>((set) => ({
 
 }))
 
+
+
+
+
+
+
+
+
+
+// Multi Language app store
+
+type LanguageType={
+    en:boolean
+    enfunc:()=>void
+}
+
+
+export const useLanguageStore = create<LanguageType>((set) => ({
+    en: true,
+  
+    enfunc: () => set((state) => ({ en: !state.en })),
+    
+  }))
+  
